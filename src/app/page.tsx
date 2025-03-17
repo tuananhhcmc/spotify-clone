@@ -1,5 +1,3 @@
-
-
 import Center from "components/Center";
 import Sidebar from "components/Sidebar";
 import type { NextPage } from "next";

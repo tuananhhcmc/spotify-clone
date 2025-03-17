@@ -2,9 +2,6 @@ import { GetServerSideProps } from "next"
 import {ClientSafeProvider, getProviders, signIn} from 'next-auth/react'
 import Image from 'next/image'
 
-
-
-
 interface Props {
   providers : Awaited<ReturnType<typeof getProviders>>
 }
@@ -44,4 +41,5 @@ return {
   props: {
     providers, 
   },
+  }
 };
