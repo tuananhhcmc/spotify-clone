@@ -10,12 +10,17 @@ import {
   
 import IconButton from './IconButton'
 import { signOut, useSession } from 'next-auth/react';
+import { usePlaylistContext } from 'contexts/PlaylistContexts';
  
 const Divider = () => <hr className='border-t-[0.1px] border-gray-900' />
 
   
 const Sidebar = () => {
     const {data:session} = useSession()
+
+    const {playlistContextState} = usePlaylistContext()
+
+    console.log('PLAYLIST CONTEXT STATE' , playlistContextState)
 
     console.log('Session',session)
     return (
