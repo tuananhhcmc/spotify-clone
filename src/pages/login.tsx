@@ -13,7 +13,7 @@ const Login = ({providers}: Props) => {
     <div className='flex flex-col justify-center items-center bg-black h-screen'>
     <div className='mb-6'>
       <Image
-        src="/spotify_logo.png" 
+        src="/spotify-logo.png" 
         alt='Spotify Logo'
         height={200}
         width={200}
