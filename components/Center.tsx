@@ -5,11 +5,27 @@ import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import UserIcon from "public/user.png";
+import { useEffect, useState } from "react";
+import { pickRandom } from "utils/pickRandom";
 
+const colors = [
+  "from-indigo-500",
+  "from-blue-500",
+  "from-green-500",
+  "from-red-500",
+  "from-yellow-500",
+  "from-pink-500",
+  "from-purple-500",
+];
 const Center = () => {
   const router = useRouter();
   const { playlistContextState } = usePlaylistContext();
   const { data: session } = useSession();
+  const [fromColor, setFromColor] = useState<string | null>(null);
+
+  useEffect(() => {
+    setFromColor(pickRandom(colors));
+  }, []);
   return (
     <div className="flex-grow text-white relative h-screen overflow-y-scroll scroll-hidden">
       <header className="absolute top-5 right-8">
@@ -31,6 +47,12 @@ const Center = () => {
           <ChevronDownIcon className="icon" />
         </div>
       </header>
+
+      <section
+        className={`flex items-end space-x-7 bg-gradient-to-b ${fromColor} to-black h-80 p-8`}
+      >
+        <p>PLAYLIST</p>
+      </section>
     </div>
   );
 };
