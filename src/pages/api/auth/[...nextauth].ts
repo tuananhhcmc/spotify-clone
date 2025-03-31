@@ -67,7 +67,6 @@ const sessionCallback: CallbacksOptions['session'] = async ({
 	session,
 	token
 }) => {
-	// session.accessToken = (token as ExtendedToken).accessToken
 	session.accessToken = (token as ExtendedToken).accessToken
 	session.error = (token as ExtendedToken).error
 
