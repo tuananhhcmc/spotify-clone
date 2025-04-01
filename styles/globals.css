@@ -1,36 +1,39 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: 255, 255, 255;
+  --foreground: 23, 23, 23;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 10, 10, 10;
+    --foreground: 237, 237, 237;
   }
 }
 
-@layer utilities{
-  .scrollbar-hidden{
-      ::-webkit-scrollbar {
+@layer utilities {
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
     display: none;
-  } 
-  /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
   }
 }
-@layer components{
-  .icon{
-    @apply h-5 w-5;
+
+@layer components {
+  .icon {
+    @apply h-5 w-5 flex-shrink-0;
   }
+  .icon-playback {
+    @apply icon transition-transform duration-200 hover:scale-125;
+  }
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
 }

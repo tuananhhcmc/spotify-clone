@@ -1,6 +1,7 @@
 "use client"; // Thêm dòng này để chỉ định đây là client component
 
 import Center from "components/Center";
+import Player from "components/Player";
 import Sidebar from "components/Sidebar";
 import PlaylistContextProvider from "contexts/PlaylistContexts";
 import type { NextPage } from "next";
@@ -20,6 +21,10 @@ const Home: NextPage = () => {
           <Sidebar />
           <Center />
         </main>
+
+        <div className="sticky bottom-0 text-white">
+          <Player />
+        </div>
       </PlaylistContextProvider>
     </div>
   );

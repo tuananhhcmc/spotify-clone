@@ -7,6 +7,7 @@ import UserIcon from "public/user.png";
 import { useEffect, useState } from "react";
 import { pickRandom } from "utils/pickRandom"; // Đảm bảo đường dẫn đúng
 import { useRouter } from "next/router";
+import Songs from "./Songs";
 
 const colors = [
   "from-indigo-500",
@@ -81,7 +82,9 @@ const Center = () => {
         )}
         <p>PLAYLIST</p>
       </section>
-      <div>{/* <Songs/> */}</div>
+      <div>
+        <Songs />
+      </div>
     </div>
   );
 };
