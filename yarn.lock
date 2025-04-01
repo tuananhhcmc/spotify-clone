@@ -256,6 +256,11 @@
   dependencies:
     csstype "^3.0.2"
 
+"@types/spotify-api@^0.0.25":
+  version "0.0.25"
+  resolved "https://registry.npmjs.org/@types/spotify-api/-/spotify-api-0.0.25.tgz"
+  integrity sha512-okhoy0U9fPWtwqCfbDyW8VxamhqvXE0gXIVeMOh5HcvEFQvWW2X0VsvdiX/OyiGQpZbZiOJXIGrbnIPfK0AIpA==
+
 "@typescript-eslint/parser@^5.4.2 || ^6.0.0":
   version "6.21.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-6.21.0.tgz"
